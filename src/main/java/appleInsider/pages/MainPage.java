@@ -13,7 +13,7 @@ public class MainPage {
 
     private final SelenideElement searchField = $x("//input[@name=\"s\"]");
     private final SelenideElement headerSiteName = $x("//h1/span[@class=\"sitename-text\"]");
-    private final SelenideElement signInForm = $x("//button[@aria-label=\"button\"]");
+    private final SelenideElement signInAndRegistrationForm = $x("//button[@aria-label=\"button\"]");
     private final SelenideElement usernameField = $x("//input[@name=\"log\"]");
     private final SelenideElement passwordField = $x("//input[@name=\"pwd\"]");
 
@@ -40,9 +40,9 @@ public class MainPage {
        return headerSiteName.getText();
     }
 
-    public MainPage clickSignInButton(){
+    public MainPage clickSignInAndRegistrationForm(){
 
-        signInForm.click();
+        signInAndRegistrationForm.click();
         return this;
     }
 
@@ -64,5 +64,11 @@ public class MainPage {
         typeUsername(usernameValue);
         typePassword(passwordValue);
         return this;
+    }
+
+
+    public boolean getFormButtonStatus(){
+
+        return signInAndRegistrationForm.isDisplayed();
     }
 }

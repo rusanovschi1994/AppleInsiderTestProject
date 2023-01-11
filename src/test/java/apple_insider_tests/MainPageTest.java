@@ -1,5 +1,6 @@
 package apple_insider_tests;
 
+import appleInsider.helpers.TestValues;
 import appleInsider.pages.MainPage;
 import apple_insider_tests.base.BaseTest;
 import org.junit.Assert;
@@ -13,14 +14,15 @@ public class MainPageTest extends BaseTest {
     @Test
     public void signInWithValidCreds(){
 
-        Assert.assertEquals(HEADER_SITE_NAME, new MainPage(BASE_URL)
-                .clickSignInButton()
-                .signIn(ADMIN_LOGIN, ADMIN_PASSWORD)
-                .getHeaderSiteName());
-
+        Assert.assertFalse(new MainPage(BASE_URL)
+                .clickSignInAndRegistrationForm()
+                .signIn(ADMIN_USERNAME, ADMIN_PASSWORD)
+                .getFormButtonStatus());
     }
 
-    public void signInWithInvalidCreds(){
+    @Test
+    public void checkHeaderName(){
 
+        Assert.assertEquals(HEADER_SITE_NAME, new MainPage(BASE_URL).getHeaderSiteName());
     }
 }

@@ -7,7 +7,7 @@ import org.junit.Before;
 
 import static com.codeborne.selenide.Configuration.*;
 
-public class BaseTest {
+public abstract class BaseTest {
 
     public void setUp(){
 
