@@ -5,9 +5,9 @@ import com.codeborne.selenide.ElementsCollection;
 import static com.codeborne.selenide.Selenide.$$x;
 
 /**
- * Страница найденных статей на сайте appleInsider.ru
+ * Found Articles page on appleInsider.ru
  */
-public class SearchArticlesPage {
+public class FoundArticlesPage {
 
     private final ElementsCollection articlesList = $$x("//h2/a");
 
@@ -15,7 +15,7 @@ public class SearchArticlesPage {
      * Получения ссылки первой статьй
      * @return
      */
-    public String getHrefForFirstArticle(){
+    public String getHrefFirstArticle(){
 
         return articlesList.first().getAttribute("href");
     }
