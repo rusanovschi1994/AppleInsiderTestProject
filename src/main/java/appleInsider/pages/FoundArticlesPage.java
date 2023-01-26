@@ -11,6 +11,10 @@ public class FoundArticlesPage {
 
     private final ElementsCollection articlesList = $$x("//h2/a");
 
+    public FoundArticlesPage(){
+
+    }
+
     /**
      * Получения ссылки первой статьй
      * @return

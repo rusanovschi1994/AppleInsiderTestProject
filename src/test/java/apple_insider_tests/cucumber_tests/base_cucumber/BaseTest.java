@@ -1,6 +1,5 @@
-package apple_insider_tests.base;
+package apple_insider_tests.cucumber_tests.base_cucumber;
 
-import appleInsider.pages.MainPage;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -8,7 +7,6 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.After;
 import org.junit.Before;
 
-import static appleInsider.readProperties.ConfigProvider.BASE_URL;
 import static com.codeborne.selenide.Configuration.*;
 
 public abstract class BaseTest {

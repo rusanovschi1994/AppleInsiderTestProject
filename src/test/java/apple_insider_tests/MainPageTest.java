@@ -7,7 +7,7 @@ import io.qameta.allure.Owner;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static appleInsider.helpers.TestValues.HEADER_SITE_NAME;
+import static appleInsider.helpers.TestValues.*;
 import static appleInsider.readProperties.ConfigProvider.*;
 
 public class MainPageTest extends BaseTest {
@@ -16,7 +16,7 @@ public class MainPageTest extends BaseTest {
     @Owner("rusanovschi")
     public void signInWithValidCreds(){
 
-        Assert.assertEquals(TestValues.regexUsername(ADMIN_USERNAME), new MainPage(BASE_URL)
+        Assert.assertEquals(regexUsername(ADMIN_USERNAME), new MainPage(BASE_URL)
                 .clickSignInAndRegistrationForm()
                 .signIn(ADMIN_USERNAME, ADMIN_PASSWORD)
                 .getUsernameLabelText());

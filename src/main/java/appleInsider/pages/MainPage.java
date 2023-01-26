@@ -21,6 +21,10 @@ public class MainPage {
     private final ElementsCollection headerMenuElements = $$("ul#menu-primary li.menu-item.menu-item-type-taxonomy");
     private final SelenideElement usernameLabel = $x("//h1[@class=\"sitename\"]/following-sibling::nav//li[@class=\"user\"]//span");
 
+    public MainPage(){
+
+    }
+
     public MainPage(String url){
 
         Selenide.open(url);
