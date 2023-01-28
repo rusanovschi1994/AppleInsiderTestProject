@@ -7,6 +7,7 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 
 import static appleInsider.helpers.TestValues.*;
 import static appleInsider.readProperties.ConfigProvider.BASE_URL;

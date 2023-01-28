@@ -6,6 +6,7 @@ import apple_insider_tests.base.BaseTest;
 import io.qameta.allure.Owner;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 
 import static appleInsider.helpers.TestValues.*;
 import static appleInsider.readProperties.ConfigProvider.*;
